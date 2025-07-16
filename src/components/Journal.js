@@ -11,13 +11,17 @@ const Journal = () => {
 
   // Load categories from JSON file
   useEffect(() => {
-    fetch('/spending-category.json')
+    fetch('/spending_data.json')
       .then(response => response.json())
-      .then(data => setCategories(data))
+      .then(data => {
+        // Extract unique categories from the spending data
+        const uniqueCategories = [...new Set(data.map(item => item.category))];
+        setCategories(uniqueCategories);
+      })
       .catch(error => {
         console.error('Error loading categories:', error);
         // Fallback categories if file can't be loaded
-        setCategories(['Food & Dining', 'Transportation', 'Shopping', 'Entertainment', 'Other']);
+        setCategories(['Groceries', 'Transportation', 'Shopping', 'Entertainment', 'Other']);
       });
   }, []);
 
