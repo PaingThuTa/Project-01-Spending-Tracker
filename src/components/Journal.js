@@ -3,6 +3,7 @@ import React, { useState, useEffect } from 'react';
 const Journal = () => {
   const [records, setRecords] = useState([]);
   const [categories, setCategories] = useState([]);
+  const [isLoaded, setIsLoaded] = useState(false);
   const [formData, setFormData] = useState({
     date: '',
     category: '',
@@ -29,14 +30,22 @@ const Journal = () => {
   useEffect(() => {
     const savedRecords = localStorage.getItem('spendingRecords');
     if (savedRecords) {
-      setRecords(JSON.parse(savedRecords));
+      try {
+        setRecords(JSON.parse(savedRecords));
+      } catch (error) {
+        console.error('Error parsing saved records:', error);
+        setRecords([]);
+      }
     }
+    setIsLoaded(true);
   }, []);
 
-  // Save records to Local Storage whenever records change
+  // Save records to Local Storage whenever records change (but only after initial load)
   useEffect(() => {
-    localStorage.setItem('spendingRecords', JSON.stringify(records));
-  }, [records]);
+    if (isLoaded) {
+      localStorage.setItem('spendingRecords', JSON.stringify(records));
+    }
+  }, [records, isLoaded]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
