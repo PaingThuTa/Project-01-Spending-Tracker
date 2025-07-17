@@ -1,13 +1,1 @@
-import React from 'react';
-import Journal from './components/Journal';
-
-function App() {
-  return (
-    <div>
-      <h1>Spending Journal</h1>
-      <Journal />
-    </div>
-  );
-}
-
-export default App; 
+aW1wb3J0IFJlYWN0IGZyb20gJ3JlYWN0JzsKaW1wb3J0IHsgQnJvd3NlclJvdXRlciBhcyBSb3V0ZXIsIFJvdXRlcywgUm91dGUsIE5hdmlnYXRlIH0gZnJvbSAncmVhY3Qtcm91dGVyLWRvbSc7CmltcG9ydCBOYXZpZ2F0aW9uIGZyb20gJy4vY29tcG9uZW50cy9OYXZpZ2F0aW9uJzsKaW1wb3J0IEFuYWx5dGljc0Rhc2hib2FyZCBmcm9tICcuL2NvbXBvbmVudHMvQW5hbHl0aWNzRGFzaGJvYXJkJzsKaW1wb3J0IEpvdXJuYWwgZnJvbSAnLi9jb21wb25lbnRzL0pvdXJuYWwnOwoKZnVuY3Rpb24gQXBwKCkgewogIHJldHVybiAoCiAgICA8Um91dGVyPgogICAgICA8ZGl2PgogICAgICAgIDxOYXZpZ2F0aW9uIC8+CiAgICAgICAgPFJvdXRlcz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvYW5hbHl0aWNzIiBlbGVtZW50PXs8QW5hbHl0aWNzRGFzaGJvYXJkIC8+fSAvPgogICAgICAgICAgPFJvdXRlIHBhdGg9Ii9qb3VybmFsIiBlbGVtZW50PXs8Sm91cm5hbCAvPn0gLz4KICAgICAgICAgIDxSb3V0ZSBwYXRoPSIvIiBlbGVtZW50PXs8TmF2aWdhdGUgdG89Ii9hbmFseXRpY3MiIHJlcGxhY2UgLz59IC8+CiAgICAgICAgPC9Sb3V0ZXM+CiAgICAgIDwvZGl2PgogICAgPC9Sb3V0ZXI+CiAgKTsKfQoKZXhwb3J0IGRlZmF1bHQgQXBwOyA=
