@@ -155,4 +155,4 @@ const Journal = () => {
   );
 };
 
-export default Journal; 
+export default Journal;

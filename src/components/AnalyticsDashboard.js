@@ -4,6 +4,8 @@ import { filterExpensesByPeriod, TIME_PERIODS } from '../utils/dateUtils';
 import TimeSelector from './TimeSelector';
 import SpendingSummary from './SpendingSummary';
 import CategoryBreakdown from './CategoryBreakdown';
+import SpendingChart from './SpendingChart';
+import CategoryChart from './CategoryChart';
 
 const AnalyticsDashboard = () => {
   const { expenses } = useExpenses();
@@ -25,6 +27,22 @@ const AnalyticsDashboard = () => {
         filteredExpenses={filteredExpenses}
         selectedPeriod={selectedPeriod}
       />
+
+      <div className="charts-section">
+        <div className="charts-grid">
+          <div className="chart-item">
+            <SpendingChart 
+              expenses={filteredExpenses} 
+              selectedPeriod={selectedPeriod}
+            />
+          </div>
+          <div className="chart-item">
+            <CategoryChart 
+              expenses={filteredExpenses}
+            />
+          </div>
+        </div>
+      </div>
 
       <CategoryBreakdown
         expenses={filteredExpenses}
