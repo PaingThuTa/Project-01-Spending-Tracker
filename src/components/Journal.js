@@ -1,51 +1,27 @@
 import React, { useState, useEffect } from 'react';
+import { useExpenses } from '../hooks/useExpenses';
 
 const Journal = () => {
-  const [records, setRecords] = useState([]);
+  const { expenses: records, addExpense, deleteExpense } = useExpenses();
   const [categories, setCategories] = useState([]);
-  const [isLoaded, setIsLoaded] = useState(false);
   const [formData, setFormData] = useState({
     date: '',
     category: '',
     amount: ''
   });
 
-  // Load categories from JSON file
   useEffect(() => {
     fetch('/spending_data.json')
       .then(response => response.json())
       .then(data => {
-        // Extract unique categories from the spending data
         const uniqueCategories = [...new Set(data.map(item => item.category))];
         setCategories(uniqueCategories);
       })
       .catch(error => {
         console.error('Error loading categories:', error);
-        // Fallback categories if file can't be loaded
         setCategories(['Groceries', 'Transportation', 'Shopping', 'Entertainment', 'Other']);
       });
   }, []);
-
-  // Load records from Local Storage on component mount
-  useEffect(() => {
-    const savedRecords = localStorage.getItem('spendingRecords');
-    if (savedRecords) {
-      try {
-        setRecords(JSON.parse(savedRecords));
-      } catch (error) {
-        console.error('Error parsing saved records:', error);
-        setRecords([]);
-      }
-    }
-    setIsLoaded(true);
-  }, []);
-
-  // Save records to Local Storage whenever records change (but only after initial load)
-  useEffect(() => {
-    if (isLoaded) {
-      localStorage.setItem('spendingRecords', JSON.stringify(records));
-    }
-  }, [records, isLoaded]);
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -68,16 +44,12 @@ const Journal = () => {
       return;
     }
 
-    const newRecord = {
-      id: Date.now(), // Simple ID generation
+    addExpense({
       date: formData.date,
       category: formData.category,
-      amount: parseFloat(formData.amount)
-    };
-
-    setRecords(prev => [...prev, newRecord]);
+      amount: formData.amount
+    });
     
-    // Reset form
     setFormData({
       date: '',
       category: '',
@@ -86,15 +58,15 @@ const Journal = () => {
   };
 
   const handleDelete = (id) => {
-    setRecords(prev => prev.filter(record => record.id !== id));
+    deleteExpense(id);
   };
 
   return (
-    <div>
+    <div className="journal">
       <h2>Add Spending Record</h2>
       
-      <form onSubmit={handleSubmit}>
-        <div>
+      <form onSubmit={handleSubmit} className="expense-form">
+        <div className="form-group">
           <label htmlFor="date">Date:</label>
           <input
             type="date"
@@ -102,17 +74,19 @@ const Journal = () => {
             name="date"
             value={formData.date}
             onChange={handleInputChange}
+            className="form-input"
             required
           />
         </div>
         
-        <div>
+        <div className="form-group">
           <label htmlFor="category">Category:</label>
           <select
             id="category"
             name="category"
             value={formData.category}
             onChange={handleInputChange}
+            className="form-select"
             required
           >
             <option value="">Select a category</option>
@@ -124,7 +98,7 @@ const Journal = () => {
           </select>
         </div>
         
-        <div>
+        <div className="form-group">
           <label htmlFor="amount">Amount:</label>
           <input
             type="number"
@@ -132,21 +106,24 @@ const Journal = () => {
             name="amount"
             value={formData.amount}
             onChange={handleInputChange}
+            className="form-input"
             step="0.01"
             min="0.01"
             required
           />
         </div>
         
-        <button type="submit">Add Record</button>
+        <button type="submit" className="btn-primary">Add Record</button>
       </form>
 
       <h2>Spending Records</h2>
       
       {records.length === 0 ? (
-        <p>No spending records yet.</p>
+        <div className="empty-state">
+          <p>No spending records yet.</p>
+        </div>
       ) : (
-        <table border="1">
+        <table className="expenses-table">
           <thead>
             <tr>
               <th>Date</th>
@@ -162,7 +139,10 @@ const Journal = () => {
                 <td>{record.category}</td>
                 <td>${record.amount.toFixed(2)}</td>
                 <td>
-                  <button onClick={() => handleDelete(record.id)}>
+                  <button 
+                    onClick={() => handleDelete(record.id)}
+                    className="btn-danger"
+                  >
                     Delete
                   </button>
                 </td>
@@ -175,4 +155,4 @@ const Journal = () => {
   );
 };
 
-export default Journal; 
+export default Journal;
