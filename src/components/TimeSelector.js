@@ -1,12 +1,4 @@
 import React from 'react';
-<<<<<<< HEAD
-<<<<<<< HEAD
-import { TIME_PERIODS, getPeriodLabel } from '../utils/dateUtils';
-
-const TimeSelector = ({ selectedPeriod, onPeriodChange }) => {
-=======
-=======
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 import { TIME_PERIODS, getPeriodLabel, getAvailableMonths } from '../utils/dateUtils';
 
 const TimeSelector = ({ 
@@ -16,22 +8,10 @@ const TimeSelector = ({
   onMonthChange, 
   expenses = [] 
 }) => {
-<<<<<<< HEAD
->>>>>>> cb52527 (- added : function to add custom category)
-=======
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   const periods = [
     TIME_PERIODS.DAILY,
     TIME_PERIODS.WEEKLY,
     TIME_PERIODS.MONTHLY,
-<<<<<<< HEAD
-<<<<<<< HEAD
-    TIME_PERIODS.ALL_TIME
-  ];
-
-=======
-=======
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
     TIME_PERIODS.SPECIFIC_MONTH,
     TIME_PERIODS.ALL_TIME
   ];
@@ -46,10 +26,6 @@ const TimeSelector = ({
     }
   };
 
-<<<<<<< HEAD
->>>>>>> cb52527 (- added : function to add custom category)
-=======
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   return (
     <div className="time-selector">
       <h3>Time Period</h3>
@@ -57,18 +33,6 @@ const TimeSelector = ({
         {periods.map(period => (
           <button
             key={period}
-<<<<<<< HEAD
-<<<<<<< HEAD
-            onClick={() => onPeriodChange(period)}
-            className={`time-selector-button ${selectedPeriod === period ? 'active' : ''}`}
-          >
-            {getPeriodLabel(period)}
-          </button>
-        ))}
-      </div>
-=======
-=======
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
             onClick={() => handlePeriodChange(period)}
             className={`time-selector-button ${selectedPeriod === period ? 'active' : ''}`}
           >
@@ -98,10 +62,6 @@ const TimeSelector = ({
           )}
         </div>
       )}
-<<<<<<< HEAD
->>>>>>> cb52527 (- added : function to add custom category)
-=======
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
     </div>
   );
 };

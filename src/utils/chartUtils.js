@@ -33,14 +33,7 @@ export const CHART_COLORS = {
   gradient: ['#4ade80', '#22c55e', '#16a34a', '#15803d', '#166534', '#14532d', '#052e16']
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Function to show line chart data
->>>>>>> cb52527 (- added : function to add custom category)
-=======
-// Function to show line chart data
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 export const generateLineChartData = (expenses, period) => {
   if (!expenses.length) {
     return {
@@ -139,14 +132,7 @@ export const generateLineChartData = (expenses, period) => {
   };
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Function to show pie chart data
->>>>>>> cb52527 (- added : function to add custom category)
-=======
-// Function to show pie chart data
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 export const generatePieChartData = (expenses) => {
   if (!expenses.length) {
     return {
@@ -190,14 +176,7 @@ export const generatePieChartData = (expenses) => {
   };
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Function to show line chart options
->>>>>>> cb52527 (- added : function to add custom category)
-=======
-// Function to show line chart options
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 export const lineChartOptions = {
   responsive: true,
   maintainAspectRatio: false,
@@ -294,14 +273,7 @@ export const lineChartOptions = {
   }
 };
 
-<<<<<<< HEAD
-<<<<<<< HEAD
-=======
 // Function to show pie chart options
->>>>>>> cb52527 (- added : function to add custom category)
-=======
-// Function to show pie chart options
->>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 export const pieChartOptions = {
   responsive: true,
   maintainAspectRatio: false,
