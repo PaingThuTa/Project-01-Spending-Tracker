@@ -7,11 +7,14 @@ import {
 } from '../utils/dateUtils';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 const SpendingSummary = ({ allExpenses, filteredExpenses, selectedPeriod }) => {
   const totalAllTime = calculateTotalSpending(allExpenses);
   const totalPeriod = calculateTotalSpending(filteredExpenses);
   
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 // Function to show spending summary
 const SpendingSummary = ({ allExpenses, filteredExpenses, selectedPeriod, selectedMonth }) => {
   const totalAllTime = calculateTotalSpending(allExpenses);
@@ -24,7 +27,10 @@ const SpendingSummary = ({ allExpenses, filteredExpenses, selectedPeriod, select
     return getPeriodLabel(selectedPeriod);
   };
   
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   return (
     <div className="spending-summary">
       <h3>Spending Summary</h3>
@@ -40,10 +46,14 @@ const SpendingSummary = ({ allExpenses, filteredExpenses, selectedPeriod, select
           <div className="summary-card period">
             <h4>
 <<<<<<< HEAD
+<<<<<<< HEAD
               {getPeriodLabel(selectedPeriod)} Total
 =======
               {getPeriodTitle()} Total
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+              {getPeriodTitle()} Total
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
             </h4>
             <p className="amount">
               {formatCurrency(totalPeriod)}

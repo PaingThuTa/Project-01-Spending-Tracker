@@ -1,4 +1,5 @@
 <<<<<<< HEAD
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useExpenses } from '../hooks/useExpenses';
 
@@ -6,6 +7,8 @@ const Journal = () => {
   const { expenses: records, addExpense, deleteExpense } = useExpenses();
   const [categories, setCategories] = useState([]);
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 import React, { useState } from 'react';
 import { useExpenses } from '../hooks/useExpenses';
 import { useCategories } from '../hooks/useCategories';
@@ -15,13 +18,17 @@ const Journal = () => {
   const { expenses: records, addExpense, deleteExpense } = useExpenses();
   const { allCategories, customCategories, addCustomCategory } = useCategories();
   const [isModalOpen, setIsModalOpen] = useState(false);
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   const [formData, setFormData] = useState({
     date: '',
     category: '',
     amount: ''
   });
 
+<<<<<<< HEAD
 <<<<<<< HEAD
   useEffect(() => {
     fetch('/spending_data.json')
@@ -39,6 +46,8 @@ const Journal = () => {
   const handleInputChange = (e) => {
     const { name, value } = e.target;
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   // Function to handle input change (w input validation)
   const handleInputChange = (e) => {
     const { name, value } = e.target;
@@ -62,7 +71,10 @@ const Journal = () => {
       return;
     }
     
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
     setFormData(prev => ({
       ...prev,
       [name]: value
@@ -70,9 +82,13 @@ const Journal = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
   // Function to handle form submission
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+  // Function to handle form submission
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -104,12 +120,18 @@ const Journal = () => {
   };
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   const handleAddCategory = (categoryName) => {
     return addCustomCategory(categoryName);
   };
 
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   return (
     <div className="journal">
       <h2>Add Spending Record</h2>
@@ -131,6 +153,7 @@ const Journal = () => {
         <div className="form-group">
           <label htmlFor="category">Category:</label>
 <<<<<<< HEAD
+<<<<<<< HEAD
           <select
             id="category"
             name="category"
@@ -147,6 +170,8 @@ const Journal = () => {
             ))}
           </select>
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
           <div className="category-input-group">
             <select
               id="category"
@@ -172,7 +197,10 @@ const Journal = () => {
               + Add Category
             </button>
           </div>
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
         </div>
         
         <div className="form-group">
@@ -229,14 +257,20 @@ const Journal = () => {
         </table>
       )}
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
       
       <AddCategoryModal
         isOpen={isModalOpen}
         onClose={() => setIsModalOpen(false)}
         onAddCategory={handleAddCategory}
       />
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
     </div>
   );
 };

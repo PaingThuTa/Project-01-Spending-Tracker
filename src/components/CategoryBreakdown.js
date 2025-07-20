@@ -2,9 +2,13 @@ import React from 'react';
 import { groupExpensesByCategory, formatCurrency, calculateTotalSpending } from '../utils/dateUtils';
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
 // category breakdown
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+// category breakdown
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 const CategoryBreakdown = ({ expenses, selectedPeriod }) => {
   const categoryTotals = groupExpensesByCategory(expenses);
   const totalSpending = calculateTotalSpending(expenses);

@@ -233,11 +233,14 @@ body {
 .journal {
   padding: 20px;
 <<<<<<< HEAD
+<<<<<<< HEAD
   max-width: 800px;
   margin: 0 auto;
 }
 
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   max-width: 1200px;
   margin: 0 auto;
 }
@@ -286,7 +289,10 @@ body {
   }
 }
 
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 .journal h2 {
   color: #333;
   margin-bottom: 20px;
@@ -372,9 +378,12 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Table Styles */
 =======
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 .expenses-table {
   width: 100%;
   border-collapse: collapse;
@@ -419,7 +428,10 @@ body {
   .journal {
     padding: 15px;
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
     display: block;
     grid-template-columns: none;
     gap: 0;
@@ -427,7 +439,10 @@ body {
   
   .journal .expense-form {
     margin-bottom: 30px;
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
   }
   
   .summary-cards {
@@ -459,9 +474,12 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Chart Styles */
 =======
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 .charts-section {
   margin-bottom: 30px;
 }
@@ -529,9 +547,12 @@ body {
 }
 
 <<<<<<< HEAD
+<<<<<<< HEAD
 /* Responsive chart styles */
 =======
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 @media (max-width: 1024px) {
   .charts-grid {
     grid-template-columns: 1fr;
@@ -564,7 +585,10 @@ body {
     font-size: 13px;
   }
 <<<<<<< HEAD
+<<<<<<< HEAD
 =======
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 }
 
 .modal-overlay {
@@ -808,5 +832,8 @@ body {
 .success-message::before {
   content: "✓";
   font-weight: bold;
+<<<<<<< HEAD
 >>>>>>> cb52527 (- added : function to add custom category)
+=======
+>>>>>>> cb52527e4ef7e27f774467ac994d9eeebc6f561d
 }
