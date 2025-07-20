@@ -33,4 +33,6 @@ The app features a minimal UI design and uses only React functional components w
 ### Alternative with npm
 If you prefer npm:
 1. Install dependencies: `npm install`
-2. Start the development server: `npm start` 
+2. Start the development server: `npm start`
+3. Start the development server: `npm start` 
+4. Start the development server: `npm start` 
