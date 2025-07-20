@@ -1,15 +1,28 @@
+<<<<<<< HEAD
 import React, { useState, useEffect } from 'react';
 import { useExpenses } from '../hooks/useExpenses';
 
 const Journal = () => {
   const { expenses: records, addExpense, deleteExpense } = useExpenses();
   const [categories, setCategories] = useState([]);
+=======
+import React, { useState } from 'react';
+import { useExpenses } from '../hooks/useExpenses';
+import { useCategories } from '../hooks/useCategories';
+import AddCategoryModal from './AddCategoryModal';
+
+const Journal = () => {
+  const { expenses: records, addExpense, deleteExpense } = useExpenses();
+  const { allCategories, customCategories, addCustomCategory } = useCategories();
+  const [isModalOpen, setIsModalOpen] = useState(false);
+>>>>>>> cb52527 (- added : function to add custom category)
   const [formData, setFormData] = useState({
     date: '',
     category: '',
     amount: ''
   });
 
+<<<<<<< HEAD
   useEffect(() => {
     fetch('/spending_data.json')
       .then(response => response.json())
@@ -25,12 +38,41 @@ const Journal = () => {
 
   const handleInputChange = (e) => {
     const { name, value } = e.target;
+=======
+  // Function to handle input change (w input validation)
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    if (name === 'amount') {
+      if (value === '') {
+        setFormData(prev => ({
+          ...prev,
+          [name]: value
+        }));
+        return;
+      }
+      
+      const numberRegex = /^\d*\.?\d*$/;
+      
+      if (numberRegex.test(value)) {
+        setFormData(prev => ({
+          ...prev,
+          [name]: value
+        }));
+      }
+      return;
+    }
+    
+>>>>>>> cb52527 (- added : function to add custom category)
     setFormData(prev => ({
       ...prev,
       [name]: value
     }));
   };
 
+<<<<<<< HEAD
+=======
+  // Function to handle form submission
+>>>>>>> cb52527 (- added : function to add custom category)
   const handleSubmit = (e) => {
     e.preventDefault();
     
@@ -61,6 +103,13 @@ const Journal = () => {
     deleteExpense(id);
   };
 
+<<<<<<< HEAD
+=======
+  const handleAddCategory = (categoryName) => {
+    return addCustomCategory(categoryName);
+  };
+
+>>>>>>> cb52527 (- added : function to add custom category)
   return (
     <div className="journal">
       <h2>Add Spending Record</h2>
@@ -81,6 +130,7 @@ const Journal = () => {
         
         <div className="form-group">
           <label htmlFor="category">Category:</label>
+<<<<<<< HEAD
           <select
             id="category"
             name="category"
@@ -96,6 +146,33 @@ const Journal = () => {
               </option>
             ))}
           </select>
+=======
+          <div className="category-input-group">
+            <select
+              id="category"
+              name="category"
+              value={formData.category}
+              onChange={handleInputChange}
+              className="form-select"
+              required
+            >
+              <option value="">Select a category</option>
+              {allCategories.map((category, index) => (
+                <option key={index} value={category}>
+                  {category}
+                  {customCategories.includes(category) ? ' (Custom)' : ''}
+                </option>
+              ))}
+            </select>
+            <button
+              type="button"
+              onClick={() => setIsModalOpen(true)}
+              className="btn-secondary add-category-btn"
+            >
+              + Add Category
+            </button>
+          </div>
+>>>>>>> cb52527 (- added : function to add custom category)
         </div>
         
         <div className="form-group">
@@ -151,6 +228,15 @@ const Journal = () => {
           </tbody>
         </table>
       )}
+<<<<<<< HEAD
+=======
+      
+      <AddCategoryModal
+        isOpen={isModalOpen}
+        onClose={() => setIsModalOpen(false)}
+        onAddCategory={handleAddCategory}
+      />
+>>>>>>> cb52527 (- added : function to add custom category)
     </div>
   );
 };

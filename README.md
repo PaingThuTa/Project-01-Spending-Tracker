@@ -12,9 +12,23 @@ This spending journal application allows users to:
 - View all spending records in a list
 - Delete individual records
 - Persist data using Local Storage
+<<<<<<< HEAD
 
 The app features a minimal UI design and uses only React functional components with hooks.
 
+=======
+- add custom categories 
+- View analytics dashboard with summary, filters, charts, and category management
+
+The app features a minimal UI design and uses only React functional components with hooks.
+
+## Tech Stack
+- React.js
+- React Router
+- Chart.js
+- Date-fns
+
+>>>>>>> cb52527 (- added : function to add custom category)
 ## Screenshots
 *Screenshots will be added here*
 
@@ -26,4 +40,8 @@ The app features a minimal UI design and uses only React functional components w
 ### Alternative with npm
 If you prefer npm:
 1. Install dependencies: `npm install`
+<<<<<<< HEAD
 2. Start the development server: `npm start`
+=======
+2. Start the development server: `npm start` 
+>>>>>>> cb52527 (- added : function to add custom category)

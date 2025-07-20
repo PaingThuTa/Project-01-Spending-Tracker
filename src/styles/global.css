@@ -232,10 +232,61 @@ body {
 
 .journal {
   padding: 20px;
+<<<<<<< HEAD
   max-width: 800px;
   margin: 0 auto;
 }
 
+=======
+  max-width: 1200px;
+  margin: 0 auto;
+}
+
+@media (min-width: 1024px) {
+  .journal {
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 40px;
+    align-items: start;
+    padding: 40px;
+    grid-template-rows: auto auto;
+  }
+  
+  .journal > h2:first-of-type {
+    grid-column: 1;
+    grid-row: 1;
+    margin-bottom: 20px;
+  }
+  
+  .expense-form {
+    grid-column: 1;
+    grid-row: 2;
+    margin-bottom: 0;
+  }
+  
+  .journal > h2:nth-of-type(2) {
+    grid-column: 2;
+    grid-row: 1;
+    margin-top: 0;
+    margin-bottom: 20px;
+  }
+  
+  .expenses-table {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+    align-self: start;
+  }
+  
+  .empty-state {
+    grid-column: 2;
+    grid-row: 2;
+    margin-top: 0;
+    align-self: start;
+  }
+}
+
+>>>>>>> cb52527 (- added : function to add custom category)
 .journal h2 {
   color: #333;
   margin-bottom: 20px;
@@ -320,7 +371,10 @@ body {
   background-color: #ef4444;
 }
 
+<<<<<<< HEAD
 /* Table Styles */
+=======
+>>>>>>> cb52527 (- added : function to add custom category)
 .expenses-table {
   width: 100%;
   border-collapse: collapse;
@@ -364,6 +418,16 @@ body {
   .analytics-dashboard,
   .journal {
     padding: 15px;
+<<<<<<< HEAD
+=======
+    display: block;
+    grid-template-columns: none;
+    gap: 0;
+  }
+  
+  .journal .expense-form {
+    margin-bottom: 30px;
+>>>>>>> cb52527 (- added : function to add custom category)
   }
   
   .summary-cards {
@@ -394,7 +458,10 @@ body {
   }
 }
 
+<<<<<<< HEAD
 /* Chart Styles */
+=======
+>>>>>>> cb52527 (- added : function to add custom category)
 .charts-section {
   margin-bottom: 30px;
 }
@@ -461,7 +528,10 @@ body {
   line-height: 1.5;
 }
 
+<<<<<<< HEAD
 /* Responsive chart styles */
+=======
+>>>>>>> cb52527 (- added : function to add custom category)
 @media (max-width: 1024px) {
   .charts-grid {
     grid-template-columns: 1fr;
@@ -493,4 +563,250 @@ body {
   .chart-empty-state p {
     font-size: 13px;
   }
+<<<<<<< HEAD
+=======
+}
+
+.modal-overlay {
+  position: fixed;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 1000;
+}
+
+.modal-content {
+  background-color: white;
+  border-radius: 12px;
+  padding: 0;
+  max-width: 400px;
+  width: 90%;
+  max-height: 90vh;
+  overflow-y: auto;
+  box-shadow: 0 10px 25px rgba(0, 0, 0, 0.2);
+}
+
+.modal-header {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 20px 24px;
+  border-bottom: 1px solid #e5e7eb;
+}
+
+.modal-header h3 {
+  margin: 0;
+  color: #333;
+  font-size: 18px;
+  font-weight: 600;
+}
+
+.modal-close {
+  background: none;
+  border: none;
+  font-size: 24px;
+  cursor: pointer;
+  color: #6b7280;
+  padding: 0;
+  width: 32px;
+  height: 32px;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 6px;
+  transition: all 0.2s ease;
+}
+
+.modal-close:hover {
+  background-color: #f3f4f6;
+  color: #374151;
+}
+
+.modal-form {
+  padding: 24px;
+}
+
+.modal-actions {
+  display: flex;
+  gap: 12px;
+  justify-content: flex-end;
+  margin-top: 24px;
+}
+
+.btn-secondary {
+  background-color: white;
+  color: #374151;
+  border: 1px solid #d1d5db;
+  padding: 10px 20px;
+  border-radius: 8px;
+  cursor: pointer;
+  font-size: 14px;
+  transition: all 0.2s ease;
+}
+
+.btn-secondary:hover {
+  background-color: #f9fafb;
+  border-color: #9ca3af;
+}
+
+.error-message {
+  color: #ef4444;
+  font-size: 14px;
+  margin-top: 6px;
+}
+
+.category-input-group {
+  display: flex;
+  gap: 10px;
+  align-items: flex-end;
+}
+
+.category-input-group .form-select {
+  flex: 1;
+}
+
+.add-category-btn {
+  background-color: #4ade80;
+  color: white;
+  border: none;
+  padding: 8px 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  font-size: 14px;
+  white-space: nowrap;
+  transition: background-color 0.2s ease;
+}
+
+.add-category-btn:hover {
+  background-color: #22c55e;
+}
+
+.month-selector {
+  margin-top: 20px;
+  padding: 16px;
+  background-color: #f9fafb;
+  border-radius: 8px;
+  border: 1px solid #e5e7eb;
+}
+
+.month-selector h4 {
+  margin: 0 0 12px 0;
+  color: #374151;
+  font-size: 16px;
+  font-weight: 500;
+}
+
+.month-select {
+  width: 100%;
+  padding: 10px 12px;
+  border: 1px solid #d1d5db;
+  border-radius: 6px;
+  font-size: 14px;
+  background-color: white;
+  color: #374151;
+}
+
+.month-select:focus {
+  outline: none;
+  border-color: #4ade80;
+  box-shadow: 0 0 0 2px rgba(74, 222, 128, 0.25);
+}
+
+.no-months {
+  color: #6b7280;
+  font-size: 14px;
+  margin: 0;
+  font-style: italic;
+}
+
+.time-selector-button {
+  position: relative;
+}
+
+.time-selector-button.active.specific-month {
+  background-color: #6366f1;
+  border-color: #6366f1;
+}
+
+.time-selector-button.active.specific-month:hover {
+  background-color: #4f46e5;
+}
+
+@media (max-width: 768px) {
+  .modal-content {
+    width: 95%;
+    margin: 20px;
+  }
+  
+  .modal-header {
+    padding: 16px 20px;
+  }
+  
+  .modal-form {
+    padding: 20px;
+  }
+  
+  .category-input-group {
+    flex-direction: column;
+    gap: 12px;
+  }
+  
+  .add-category-btn {
+    align-self: stretch;
+    text-align: center;
+  }
+  
+  .month-selector {
+    padding: 12px;
+  }
+  
+  .modal-actions {
+    flex-direction: column-reverse;
+    gap: 8px;
+  }
+  
+  .btn-secondary,
+  .btn-primary {
+    width: 100%;
+    text-align: center;
+  }
+}
+
+.form-select option[data-custom="true"] {
+  font-style: italic;
+  color: #6366f1;
+}
+
+.loading-spinner {
+  display: inline-block;
+  width: 16px;
+  height: 16px;
+  border: 2px solid #f3f4f6;
+  border-radius: 50%;
+  border-top-color: #4ade80;
+  animation: spin 1s ease-in-out infinite;
+}
+
+@keyframes spin {
+  to { transform: rotate(360deg); }
+}
+
+.success-message {
+  color: #10b981;
+  font-size: 14px;
+  margin-top: 6px;
+  display: flex;
+  align-items: center;
+  gap: 6px;
+}
+
+.success-message::before {
+  content: "✓";
+  font-weight: bold;
+>>>>>>> cb52527 (- added : function to add custom category)
 }
