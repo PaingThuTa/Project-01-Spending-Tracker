@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+// Custom hook for managing expense data
 export const useExpenses = () => {
   const [expenses, setExpenses] = useState([]);
   const [isLoaded, setIsLoaded] = useState(false);
