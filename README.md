@@ -23,10 +23,22 @@ The app features a minimal UI design and uses only React functional components w
 - Date-fns
 
 ## Screenshots
+
+### 1. Analytics Dashboard (Initial State)
 ![Page 1: Analytics Dashboard](<screenshots/Spending Journal.png>)
+*The main analytics dashboard showing spending summary, category breakdown charts, and time filters. This is the default view when users first visit the application.*
+
+### 2. Journal Page (Empty State)
 ![Page 2: Journal](<screenshots/expense journal.png>)
-![Page 2: Journal after test data added ](<screenshots/test1.png>)
+*The journal page where users can add new spending records. Shows the clean interface with input fields for date, category, amount, and description.*
+
+### 3. Journal Page (With Test Data)
+![Page 2: Journal after test data added](<screenshots/test1.png>)
+*The journal page populated with sample spending records, demonstrating how the expense list displays with options to delete individual entries.*
+
+### 4. Analytics Dashboard (With Test Data)
 ![Page 1: Analytics Dashboard after test data added](<screenshots/test2.png>)
+*The analytics dashboard showing comprehensive data visualization after adding test expenses, including updated charts, category breakdowns, and spending summaries.*
 
 
 ## How to Run
