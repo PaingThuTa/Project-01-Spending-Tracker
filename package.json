@@ -2,7 +2,7 @@
   "name": "spending-journal",
   "version": "1.0.0",
   "description": "spending journal React web app",
-  "homepage": "https://Tris-Cody-Project-01-Spending-Tracker.github.io",
+  "homepage": "https://PaingThuTa.github.io/Project-01-Spending-Tracker",
   "main": "index.js",
   "scripts": {
     "start": "react-scripts start",
