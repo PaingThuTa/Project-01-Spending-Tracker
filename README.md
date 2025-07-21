@@ -25,8 +25,8 @@ The app features a minimal UI design and uses only React functional components w
 ## Screenshots
 ![Page 1: Analytics Dashboard](<screenshots/Spending Journal.png>)
 ![Page 2: Journal](<screenshots/expense journal.png>)
-![Page 2: Journal after test data added ](<screenshots/journla test.png>)
-![Page 1: Analytics Dashboard after test data added](<screenshots/test 2.png>)
+![Page 2: Journal after test data added ](<screenshots/test1.png>)
+![Page 1: Analytics Dashboard after test data added](<screenshots/test2.png>)
 
 
 ## How to Run
