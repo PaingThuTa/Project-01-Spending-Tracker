@@ -23,10 +23,10 @@ The app features a minimal UI design and uses only React functional components w
 - Date-fns
 
 ## Screenshots
-![alt text](<screenshots/Spending Journal.png>)
-![alt text](<screenshots/expense journal.png>)
-![alt text](<screenshots/journla test.png>)
-![alt text](<screenshots/test 2.png>)
+![Page 1: Analytics Dashboard](<screenshots/Spending Journal.png>)
+![Page 2: Journal](<screenshots/expense journal.png>)
+![Page 2: Journal after test data added ](<screenshots/journla test.png>)
+![Page 1: Analytics Dashboard after test data added](<screenshots/test 2.png>)
 
 
 ## How to Run
