@@ -6,7 +6,6 @@ yarn-error.log*
 pnpm-debug.log*
 
 # Lock files (keep pnpm-lock.yaml for consistency)
-# Uncomment the line below if you want to ignore the lock file
 # pnpm-lock.yaml
 
 # Production builds
@@ -34,3 +33,6 @@ dist/
 .Trashes
 ehthumbs.db
 Thumbs.db
+
+# node_modules
+node_modules/
