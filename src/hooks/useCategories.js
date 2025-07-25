@@ -1,5 +1,6 @@
 import { useState, useEffect } from 'react';
 
+// Custom hook for managing category data
 export const useCategories = () => {
   const [categories, setCategories] = useState([]);
   const [customCategories, setCustomCategories] = useState([]);
