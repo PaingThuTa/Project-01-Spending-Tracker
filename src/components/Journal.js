@@ -163,7 +163,7 @@ const Journal = () => {
               <tr key={record.id}>
                 <td>{record.date}</td>
                 <td>{record.category}</td>
-                <td>${record.amount.toFixed(2)}</td>
+                <td>฿{record.amount.toFixed(2)}</td>
                 <td>
                   <button 
                     onClick={() => handleDelete(record.id)}

@@ -88,9 +88,9 @@ export const calculateTotalSpending = (expenses) => {
 
 // Function to format currency
 export const formatCurrency = (amount) => {
-  return new Intl.NumberFormat('en-US', {
+  return new Intl.NumberFormat('th-TH', {
     style: 'currency',
-    currency: 'USD'
+    currency: 'THB'
   }).format(amount);
 };
 

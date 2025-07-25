@@ -225,7 +225,7 @@ export const lineChartOptions = {
       },
       callbacks: {
         label: function(context) {
-          return `$${context.parsed.y.toFixed(2)}`;
+          return `฿${context.parsed.y.toFixed(2)}`;
         }
       }
     }
@@ -257,7 +257,7 @@ export const lineChartOptions = {
         },
         color: '#6b7280',
         callback: function(value) {
-          return '$' + value.toFixed(0);
+          return '฿' + value.toFixed(0);
         }
       }
     }
@@ -347,7 +347,7 @@ export const pieChartOptions = {
           const value = context.parsed;
           const total = context.dataset.data.reduce((sum, val) => sum + val, 0);
           const percentage = ((value / total) * 100).toFixed(1);
-          return `${label}: $${value.toFixed(2)} (${percentage}%)`;
+          return `${label}: ฿${value.toFixed(2)} (${percentage}%)`;
         }
       }
     }
