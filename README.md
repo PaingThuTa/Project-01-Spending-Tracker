@@ -45,10 +45,3 @@ The app features a minimal UI design and uses only React functional components w
 1. Install dependencies: `pnpm install`
 2. Start the development server: `pnpm start` or `pnpm dev`
 3. Open http://localhost:3000 in your browser
-
-### Alternative with npm
-If you prefer npm:
-1. Install dependencies: `npm install`
-2. Start the development server: `npm start`
-3. Start the development server: `npm start` 
-4. Start the development server: `npm start` 
